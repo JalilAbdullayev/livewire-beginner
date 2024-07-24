@@ -36,4 +36,5 @@
             {{ $user->name }}
         </h3>
     @endforeach
+    {{ $users->links('vendor.livewire.test') }}
 </div>
