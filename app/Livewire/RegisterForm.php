@@ -27,9 +27,14 @@ class RegisterForm extends Component {
         if($this->image) {
             $validated['image'] = $this->image->store('uploads', 'public');
         }
-        User::create($validated);
+        $user = User::create($validated);
         $this->reset(['name', 'email', 'password', 'image']);
         session()->flash('success', 'User created successfully!');
+        $this->dispatch('user-created', $user);
+    }
+
+    public function ReloadList() {
+        $this->dispatch('user-created');
     }
 
     public function render() {
