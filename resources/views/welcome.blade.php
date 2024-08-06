@@ -7,6 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-@livewire('register-form')
+@livewire('users-list')
 </body>
 </html>
