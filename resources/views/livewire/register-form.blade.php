@@ -58,8 +58,24 @@
                 Uploading...
             </span>
         </div>
-        <button type="submit" class="block mt-3 px-4 py-2 bg-teal-500 text-white font-semibold rounded
-        hover:bg-teal-600">
+        {{--
+        delay 200ms gecikdirir.
+        longest 1s.
+        --}}
+        <div wire:loading.delay.longest>
+            <span class="text-green-500">
+                Sending...
+            </span>
+        </div>
+        {{--
+        remove tamamilə silir.
+        attr atributunu dəyişdirir.
+        class loading zamanı class əlavə edir.
+        class.remove class silir
+        --}}
+        <button {{--wire:loading.remove--}} wire:loading.attr="disabled" wire:loading.class.remove="text-white"
+                type="submit" class="block mt-3 px-4 py-2 bg-teal-500 text-white font-semibold rounded
+                hover:bg-teal-600">
             Create +
         </button>
     </form>
