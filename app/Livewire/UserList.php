@@ -9,14 +9,18 @@ use Livewire\WithPagination;
 class UserList extends Component {
     use WithPagination;
 
-    public function placeholder() {
+    public string $search;
+
+    public function update() {}
+
+    /*public function placeholder() {
         return view('placeholder');
-    }
+    }*/
 
     public function render() {
-        sleep(3);
+//        sleep(3);
         return view('livewire.user-list', [
-            'users' => User::latest()->paginate(5),
+            'users' => User::latest()->where('name', 'like', "%{$this->search}%")->paginate(5),
             'count' => User::count()
         ]);
     }
