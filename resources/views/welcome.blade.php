@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-@livewire('users-list')
+@livewire('user-list', ['lazy' => true])
+{{--<livewire:user-list lazy/>--}}
 </body>
 </html>
