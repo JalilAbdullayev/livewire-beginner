@@ -10,9 +10,6 @@
     <input type="search" wire:model.live.throttle.200ms="search" placeholder="Search"
            class="ring-1 ring-inset ring-gray-300 bg-gray-100 text-gray-900 text-sm rounded block w-full p-2.5
            mx-auto"/>
-    <button wire:click="update" type="button" class="block mt-3 px-4 py-2 bg-teal-500 rounded">
-        Search
-    </button>
     <div role="status" class="my-3 p-4 border border-gray-200 divide-y divide-gray-200 rounded shadow
     md:p-6">
         @foreach($users as $user)

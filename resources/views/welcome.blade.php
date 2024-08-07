@@ -7,7 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-@livewire('user-list', ['lazy' => true])
-{{--<livewire:user-list lazy/>--}}
+{{--@livewire('user-list', ['search' => 'prof'])--}}
+{{-- Atributdan qabaq : qoymaqla " " içində PHP kodu yazmaq mümkündür. --}}
+<livewire:user-list search="prof"/>
 </body>
 </html>
