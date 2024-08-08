@@ -12,7 +12,7 @@
            mx-auto"/>
     <div role="status" class="my-3 p-4 border border-gray-200 divide-y divide-gray-200 rounded shadow
     md:p-6">
-        @foreach($users as $user)
+        @foreach($this->users as $user)
             <div wire:key="{{ $user->id }}" class="flex items-center justify-between py-3">
                 <div>
                     <div class="text-gray-900 rounded-full w-24 mb-23 truncate">
