@@ -4,12 +4,14 @@ namespace App\Livewire;
 
 use App\Models\User;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
 class UserList extends Component {
     use WithPagination;
 
+    #[Url(as: 's', history: true)]
     public string $search = '';
 
     public function mount($search) {
